@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Link Form</title>
+    <link rel="stylesheet" href="ref.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">
+                <img src="/assets/logo.jpeg">
+                <span style="padding-bottom: 20px;">ClaimMaster</span>
+            </a></li>
+           
+            <li><a href="about.asp"> (415)-315-9673</a></li>
+          </ul>
+    </nav>
+    <div class="main_cotainer">
+    <div class="left_comtainer">
+        <div class="img">
+            <img src="/assets/personalinuryclaim.jpg">
+        </div>
+        <div class="heading_main">
+         <h1> The Compensation</h1>
+        </div>
+        <div class="sub_heading">
+            <h3> Providing a gateway to experienced attorneys for those in need.</h3>
+
+           </div>
+           <div class="content">
+            <p>Our mission is to raise awareness about hazardous drugs, faulty medical devices, and consumer product liabilities. We connect individuals with law firms that empower them to make informed decisions, providing victims of corporate negligence with the resources needed to pursue justice. </p>
+
+           </div>
+           <div class="pt-box">
+            <ul>
+              <li><span class="icon">&#10004;</span>It's absolutely free! You don't have to spend a single penny.</li>
+              <li><span class="icon">&#10004;</span>You do not have to share any banking credentials throughout the process.</li>
+              <li><span class="icon">&#10004;</span>You don't have to visit the courts for any proceedings.</li>
+            </ul>            
+           </div>
+           
+           
+     </div>
+    <div class="right_container">
+       
+            <div class="right">
+                <h2>Compensation Form</h2>
+
+                <form name="submit-to-google-sheet"  action="#" method="post" class="animated-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name"  placeholder="John Smith"  required>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email"  placeholder="John@gmail.com" required>
+                    <div class="dob">
+                        <label for="dob">Date Of Birth:</label>
+                    <input type="Date" id="dob" name="dob" required>
+                    </div>
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="tel" id="phone_number" name="phone_number" placeholder="415-315-9673" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <label for="address">Physical Address:</label>
+                    <input type="text" id="address" name="address" placeholder="5703 VIRGINIA ST CAMP LEJEUNE NC 28547-1241 "  required>
+                    <label for="referral">Reffered By:</label>
+                    <input type="text" id="referral" name="referral" >
+                    <button type="submit" class="btn btn-default bt"  onclick="myFunction()" style="align:right;">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <div class="contactus">
+       
+       <div class="left_c">
+        <h5>Get In Touch</h5>
+        <p> Want to Get in touch?<br> We'd love to hear from you 
+            here you can reach us
+        </p>
+       </div>
+       <div class="middle">
+        <h5><ul></ul>Call us</h5>
+
+        <p>Intrested for Compensation?<br> just pick up the phone to chat or call to our team
+           <br>
+           <span style="color:bisque;">  <i class="fas fa-phone"></i> (415)-315-9673</span></p>
+        <p> </p>
+
+       </div>
+       <div class="right_c">
+        <h5>Mail Us</h5>
+        <p>For inquiries via email, reach out to us at<br>
+            <span style="color:bisque;"> <i class="fas fa-envelope"></i> ghill2036@gmail.com</p></span>
+        <p></p>
+
+       </div>
+       </div>
+       <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyD5YJIRlfFCvo7RBXsDxre6yf9CjJCHifPXIuH2yy4gtga6R9kotiixrR5zAnVrh4oEA/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script src="ref.js"></script>
+</body>
+</html>
