@@ -17,6 +17,7 @@ body {
 }
 
 .right_container {
+    
     /* float: right;
      */
      flex-basis: 50%;
@@ -41,7 +42,7 @@ body {
     padding:  66px;
     /* max-width: 995px; */
     /* background-color: #fff; */
-    padding: 2px 4px 10em  4px;
+    padding: 2px 4px 9em  4px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
